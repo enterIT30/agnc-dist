@@ -36,9 +36,13 @@
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   font-size: 29px;
-  line-height: 209%;
+  line-height: 100%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.advantages__list li {
+  padding: 15px 0;
 }
 
 .advantages__list li:not(:last-child) {

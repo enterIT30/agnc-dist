@@ -82,9 +82,13 @@
   grid-row: 1/4;
   margin-top: 10px;
   font-size: 29px;
-  line-height: 209%;
+  line-height: 100%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.expertise__list li {
+  padding: 15px 0;
 }
 
 .expertise__list li:not(:last-child) {
