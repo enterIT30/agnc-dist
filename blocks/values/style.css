@@ -3,8 +3,8 @@
   padding: 190px 0 200px;
   overflow: hidden;
   background: url(../img/agnc-bgi.png) no-repeat center/290%;
-  -webkit-animation: gradient 40s linear infinite;
-          animation: gradient 40s linear infinite;
+  -webkit-animation: marquee 40s linear infinite;
+          animation: marquee 40s linear infinite;
 }
 
 .values__wrapper {
@@ -27,61 +27,6 @@
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
-}
-
-.values__bg {
-  display: none;
-  position: absolute;
-  top: 31%;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.values__marquee {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 230px;
-  font-weight: 250;
-  font-size: 400px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  opacity: 0.5;
-  color: transparent;
-  -webkit-text-stroke: 1px #9389d2;
-  -webkit-animation: animate3 30s linear infinite;
-          animation: animate3 30s linear infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-
-@-webkit-keyframes animate3 {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-
-  100% {
-    -webkit-transform: translateX(calc(-100% + 100vw));
-            transform: translateX(calc(-100% + 100vw));
-  }
-}
-
-@keyframes animate3 {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-
-  100% {
-    -webkit-transform: translateX(calc(-100% + 100vw));
-            transform: translateX(calc(-100% + 100vw));
-  }
 }
 
 .values__value {
@@ -152,7 +97,7 @@
   left: 12%;
 }
 
-@-webkit-keyframes gradient {
+@-webkit-keyframes marquee {
   0% {
     background-position: 0% 50%;
   }
@@ -166,7 +111,7 @@
   }
 }
 
-@keyframes gradient {
+@keyframes marquee {
   0% {
     background-position: 0% 50%;
   }
@@ -183,10 +128,6 @@
 @media screen and (max-width: 1500px) {
   .values {
     padding: 13% 0 12%;
-  }
-
-  .values__marquee {
-    font-size: 28vw;
   }
 
   .values__value {
@@ -240,6 +181,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .values {
+    background: none;
+  }
+
   .values__wrapper {
     padding: 0 15px;
   }
@@ -247,10 +192,6 @@
   .values__ellipse {
     background: none;
     aspect-ratio: unset;
-  }
-
-  .values__marquee {
-    display: none;
   }
 
   .values__value {
