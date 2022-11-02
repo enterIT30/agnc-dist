@@ -1840,6 +1840,9 @@ canvas {
   position: relative;
   padding: 190px 0 200px;
   overflow: hidden;
+  background: url(../img/agnc-bgi.png) no-repeat center/290%;
+  -webkit-animation: gradient 40s linear infinite;
+          animation: gradient 40s linear infinite;
 }
 
 .values__wrapper {
@@ -1865,9 +1868,11 @@ canvas {
 }
 
 .values__bg {
+  display: none;
   position: absolute;
   top: 31%;
   left: 0;
+  right: 0;
   pointer-events: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1983,6 +1988,34 @@ canvas {
 .values__value_12 {
   top: 20%;
   left: 12%;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .influencers {
