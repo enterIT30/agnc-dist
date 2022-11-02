@@ -1,0 +1,176 @@
+.influencers {
+  background-color: #9389d2;
+  padding: 108px 0 124px;
+}
+
+.influencers__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.influencers__title {
+  margin-bottom: 4px;
+}
+
+.influencers__title h2 {
+  color: #ffffff;
+}
+
+.influencers__desc p {
+  font-weight: 250;
+  font-size: 20px;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.influencers__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 22px;
+}
+
+.influencers__pagination {
+  display: none;
+}
+
+.influencers button {
+  outline: none;
+}
+
+.influencers__button {
+  border: none;
+}
+
+.influencers__button:active svg {
+  stroke: #080105;
+}
+
+.influencers__button svg {
+  stroke: #ffffff;
+  -webkit-transition: stroke 0.3s ease;
+  -o-transition: stroke 0.3s ease;
+  transition: stroke 0.3s ease;
+}
+
+.influencers-slider {
+  margin-top: 80px;
+  padding-left: max(30px, (100% - 1434px) / 2);
+  overflow: hidden;
+}
+
+.influencers-card__info {
+  margin-top: 22px;
+  color: #ffffff;
+}
+
+.influencers-card__name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.influencers-card__career {
+  font-weight: 250;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 1920px) {
+  .influencers-slider {
+    padding-left: 10.938vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .influencers {
+    padding: 80px 0 100px;
+  }
+
+  .influencers-slider {
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .influencers {
+    padding: 60px 0 80px;
+  }
+
+  .influencers__desc p {
+    font-size: 16px;
+  }
+
+  .influencers-slider {
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .influencers {
+    padding: 40px 0 60px;
+  }
+
+  .influencers-card__info {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .influencers__arrows {
+    display: none;
+  }
+
+  .influencers__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 4px;
+       -moz-column-gap: 4px;
+            column-gap: 4px;
+    height: 10px;
+    margin-top: 30px;
+  }
+
+  .influencers__pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #D7E1E9;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 50%;
+  }
+
+  .influencers__pagination .swiper-pagination-bullet-active {
+    background: #4ccb29;
+  }
+}
+
+@media (any-hover: hover) {
+  .influencers__button:hover svg {
+    stroke: #080105;
+  }
+}
