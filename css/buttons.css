@@ -47,11 +47,12 @@
   pointer-events: none;
 }
 
-.btn-ellipse_green {
+.btn-ellipse_white {
   padding: 22px 0;
+  color: #ffffff;
 }
 
-.btn-ellipse_green::before {
+.btn-ellipse_white::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -62,7 +63,7 @@
   z-index: -1;
   width: 120%;
   height: 3.8rem;
-  background-color: #92ff6b;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -70,12 +71,11 @@
   pointer-events: none;
 }
 
-.btn-ellipse_fill {
+.btn-ellipse_brief {
   padding: 22px 0;
-  color: #ffffff;
 }
 
-.btn-ellipse_fill::before {
+.btn-ellipse_brief::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -86,7 +86,7 @@
   z-index: -1;
   width: 120%;
   height: 3.8rem;
-  background-color: #9389d2;
+  border: 1px solid #9389d2;
   border-radius: 50%;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -96,8 +96,32 @@
 
 @media (any-hover: hover) {
   .btn-ellipse:hover {
-    -webkit-transform: scale(1.06);
-        -ms-transform: scale(1.06);
-            transform: scale(1.06);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+
+  .btn-ellipse_lavend:hover {
+    color: #92ff6b;
+  }
+
+  .btn-ellipse_lavend:hover::before {
+    background-color: #9389d2;
+  }
+
+  .btn-ellipse_white:hover {
+    color: #080105;
+  }
+
+  .btn-ellipse_white:hover::before {
+    background-color: #ffffff;
+  }
+
+  .btn-ellipse_brief:hover {
+    color: #ffffff;
+  }
+
+  .btn-ellipse_brief:hover::before {
+    background-color: #9389d2;
   }
 }

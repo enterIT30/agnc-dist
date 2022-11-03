@@ -172,11 +172,12 @@ h2 {
   pointer-events: none;
 }
 
-.btn-ellipse_green {
+.btn-ellipse_white {
   padding: 22px 0;
+  color: #ffffff;
 }
 
-.btn-ellipse_green::before {
+.btn-ellipse_white::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -187,7 +188,7 @@ h2 {
   z-index: -1;
   width: 120%;
   height: 3.8rem;
-  background-color: #92ff6b;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -195,12 +196,11 @@ h2 {
   pointer-events: none;
 }
 
-.btn-ellipse_fill {
+.btn-ellipse_brief {
   padding: 22px 0;
-  color: #ffffff;
 }
 
-.btn-ellipse_fill::before {
+.btn-ellipse_brief::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -211,7 +211,7 @@ h2 {
   z-index: -1;
   width: 120%;
   height: 3.8rem;
-  background-color: #9389d2;
+  border: 1px solid #9389d2;
   border-radius: 50%;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -1176,7 +1176,7 @@ canvas {
   grid-row: 1/4;
   margin-top: 10px;
   font-size: 29px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -1267,7 +1267,7 @@ canvas {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   font-size: 29px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -1485,7 +1485,7 @@ canvas {
   grid-row: 1/2;
   margin-top: 10px;
   font-size: 29px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -1512,6 +1512,7 @@ canvas {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   gap: 30px;
+  margin-top: 34px;
   color: #949494;
 }
 
@@ -2210,6 +2211,21 @@ canvas {
   height: 93px;
   border: 1px solid #CDCDCD;
   border-radius: 50px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.media__card:hover,
+.clients__card:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .contacts {
@@ -2873,7 +2889,6 @@ canvas {
     -ms-grid-row-span: 1;
     grid-row: 4/5;
     display: block;
-    margin-top: 34px;
   }
 
   .uniqueness__desc p:not(:last-child) {
@@ -3869,15 +3884,39 @@ canvas {
 
 @media (any-hover: hover) {
   .btn-ellipse:hover {
-    -webkit-transform: scale(1.06);
-        -ms-transform: scale(1.06);
-            transform: scale(1.06);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+
+  .btn-ellipse_lavend:hover {
+    color: #92ff6b;
+  }
+
+  .btn-ellipse_lavend:hover::before {
+    background-color: #9389d2;
+  }
+
+  .btn-ellipse_white:hover {
+    color: #080105;
+  }
+
+  .btn-ellipse_white:hover::before {
+    background-color: #ffffff;
+  }
+
+  .btn-ellipse_brief:hover {
+    color: #ffffff;
+  }
+
+  .btn-ellipse_brief:hover::before {
+    background-color: #9389d2;
   }
 
   .header__link:hover {
-    -webkit-transform: scale(1.06);
-        -ms-transform: scale(1.06);
-            transform: scale(1.06);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
   }
 
   .influencers__button:hover svg {
