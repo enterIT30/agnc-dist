@@ -1,0 +1,156 @@
+@import "src/scss/colors.scss";
+
+.influencers {
+    background-color: $lavender;
+    padding: 108px 0 124px;
+
+    @media screen and (max-width: 1100px){
+        padding: 80px 0 100px;
+    }
+
+    @media screen and (max-width: 800px){
+        padding: 60px 0 80px;
+    }
+
+    @media screen and (max-width: 640px){
+        padding: 40px 0 60px;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 4px;
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    &__desc {
+
+        p {
+            font-weight: 250;
+            font-size: 20px;
+            line-height: 100%;
+            color: $white;
+
+            @media screen and (max-width: 800px){
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        @media screen and (max-width: 480px){
+            display: none;
+        }
+    }
+
+    &__pagination {
+        display: none;
+
+        @media screen and (max-width: 480px){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 4px;
+            height: 10px;
+            margin-top: 30px;
+
+            & .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: #D7E1E9;
+                transition: 0.2s;
+                border-radius: 50%;
+
+                &-active {
+                    background: $green;
+                }
+            }
+        }
+    }
+
+    button {
+        outline: none;
+    }
+
+    &__button {
+        border: none;
+
+        &:active {
+            svg {
+                stroke: $black;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover{
+                svg {
+                    stroke: $black;
+                }
+            }
+        }
+
+        svg {
+            stroke: $white;
+            transition: stroke 0.3s ease;
+        }
+    }
+}
+
+.influencers-slider {
+    margin-top: 80px;
+    padding-left: max(30px, calc((100% - 1434px) / 2));
+    overflow: hidden;
+
+    @media screen and (min-width: 1920px){
+        padding-left: 10.938vw;
+    }
+
+    @media screen and (max-width: 1100px){
+        margin-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media screen and (max-width: 800px){
+        margin-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.influencers-card {
+
+    &__info {
+        margin-top: 22px;
+        color: $white;
+
+        @media screen and (max-width: 640px){
+            margin-top: 15px;
+        }
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    &__career {
+        font-weight: 250;
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

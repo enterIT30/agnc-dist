@@ -1,0 +1,105 @@
+@import "./colors";
+
+.container,
+[class*="__container"] {
+    max-width: 1492px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media screen and (min-width: 1920px) {
+        max-width: none;
+        padding: 0 10.938vw;
+    }
+
+    @media screen and (max-width: 800px){
+        padding: 0 15px;
+    }
+}
+
+html {
+    font-family: Pragmatica, serif;
+    scroll-behavior: smooth;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Pragmatica, serif;
+    margin: 0;
+    color: $darck;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0 !important;
+    border-radius: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $black;
+
+    @media screen and (max-width: 1100px){
+        font-size: 48px;
+    }
+
+    @media screen and (max-width: 800px){
+        font-size: 36px;
+    }
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.text-up {
+    font-weight: 250;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 640px){
+        font-size: 20px;
+    }
+}
+
+.main__title,
+.expertise,
+.advantages,
+.uniqueness,
+.about,
+.team,
+.service,
+.values,
+.influencers,
+.media,
+.clients,
+.contacts {
+    opacity: 0;
+    transform: translateY(20%);
+
+    &.element-show {
+        opacity: 1;
+        transform: translateY(0%);
+        transition: all 0.8s ease 0s;
+    }
+}

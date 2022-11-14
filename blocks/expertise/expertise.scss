@@ -1,0 +1,180 @@
+@import "src/scss/colors.scss";
+
+.expertise {
+    position: relative;
+    padding: 72px 0 98px;
+    background: url(../img/ellipse-blue-top.svg) no-repeat;
+    background-position: 17vw 110%;
+
+    @media screen and (max-width: 800px){
+        padding: 52px 0 78px;
+        background: none;
+    }
+
+    @media screen and (max-width: 640px){
+        padding: 40px 0 60px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: minmax(300px, 581px) minmax(507px, 701px);
+        grid-template-rows: auto;
+        justify-content:space-between;
+        column-gap: 30px;
+
+        @media (min-width: 1920px){
+            grid-template-columns: 581px 701px;
+            grid-template-rows: auto;
+        }
+
+        @media screen and (max-width: 1100px){
+            grid-template-columns: minmax(213px, 1fr) 507px;
+            grid-template-rows: auto;
+        }
+
+        @media screen and (max-width: 800px){
+            display: block;
+        }
+    }
+
+    &__graphics {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 213px;
+        height: 213px;
+        margin-bottom: 60px;
+        background: url(../img/graphics/expertise.svg) no-repeat center / cover;
+
+        @media screen and (max-width: 1100px){
+            grid-row: 3/4;
+            margin: auto 0;
+        }
+
+        @media screen and (max-width: 800px){
+            display: none;
+        }
+    }
+
+    &__title {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1100px){
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+
+    &__subtitle {
+        grid-column: 1/2;
+        grid-row: 3/4;
+
+        @media screen and (max-width: 1100px){
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+
+        strong {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        span {
+            font-style: italic;
+            font-weight: 400;
+            color: $lavender;
+        }
+    }
+
+    &__list {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        margin-top: 10px;
+        font-size: 29px;
+        line-height: 120%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1100px){
+            grid-row: 3/4;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 640px){
+            font-size: 23px;
+            line-height: 120%;
+        }
+
+        li {
+            padding: 15px 0;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $lavender;
+            }
+
+            @media screen and (max-width: 640px){
+                padding: 5px 0;
+            }
+        }
+    }
+
+    &__desc {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+        margin-top: 34px;
+        color: $grey;
+
+        @media screen and (max-width: 1100px){
+            grid-column: 1/3;
+            grid-row: 4/5;
+            display: block;
+        }
+
+        @media screen and (max-width: 800px){
+            display: grid;
+        }
+
+        @media screen and (max-width: 640px){
+            display: block;
+            margin-top: 20px;
+        }
+
+        p {
+            @media screen and (max-width: 1100px){
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            @media screen and (max-width: 800px){
+                &:not(:last-child) {
+                    margin-bottom: 0px;
+                }
+            }
+
+            @media screen and (max-width: 640px){
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        strong, a {
+            font-weight: 400;
+            font-style: italic;
+            text-transform: uppercase;
+            color: $black;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
